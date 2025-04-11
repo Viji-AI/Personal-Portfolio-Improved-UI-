@@ -5,7 +5,7 @@ Welcome to my personal portfolio website! This site highlights my education, pro
 
 ## 🔗 Live Demo
 
-You can view the live website here: [https://your-username.github.io/your-repo-name](https://your-username.github.io/your-repo-name)  
+You can view the live website here:  https://viji-ai.github.io/Personal-Portfolio-Improved-UI-/ 
 
 ---
 
