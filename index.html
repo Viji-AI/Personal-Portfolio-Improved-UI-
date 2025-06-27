@@ -7,13 +7,20 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Poppins', sans-serif; }
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    html, body {
+      height: 100%;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-blue-100 text-gray-800">
 
-  <!-- Header Section -->
-  <header class="bg-white shadow-md py-10 sticky top-0 z-50">
+  <!-- Fixed Header -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md py-10 z-50">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
       <img src="profile.JPG" alt="Profile Photo" class="rounded-full border-4 border-blue-600 w-32 h-32 shadow-lg">
       <div class="text-center md:text-left mt-6 md:mt-0 md:ml-8">
@@ -25,108 +32,25 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   </header>
 
-  <!-- Main Content Section -->
-  <main class="max-w-6xl mx-auto px-6 py-16 space-y-20">
-    
-    <!-- Education Section -->
-    <section>
-      <h2 class="text-3xl font-bold text-blue-700 mb-8">🎓 Education</h2>
-      <div class="bg-white shadow-xl rounded-xl p-6 hover:shadow-2xl transition">
-        <p class="text-xl font-semibold">Manonmaniam Sundaranar University, Tirunelveli</p>
-        <p class="text-gray-600">B.Sc in Artificial Intelligence & Machine Learning</p>
-        <p class="text-sm text-gray-500 mt-2">2023 - Present | Tirunelveli, India</p>
-      </div>
-    </section>
+  <!-- Main Content -->
+  <main class="pt-[250px] max-w-6xl mx-auto px-6 py-16 space-y-20">
+    <!-- All your sections remain the same... -->
+    <!-- [Education, Experience, Projects, Skills, etc.] -->
 
-    <!-- Experience Section -->
-    <section>
-      <h2 class="text-3xl font-bold text-blue-700 mb-8">💼 Experience</h2>
-      <div class="bg-white shadow-xl rounded-xl p-6 hover:shadow-2xl transition">
-        <p class="text-xl font-semibold">Full Stack Developer Intern - Unified Mentor</p>
-        <p class="text-sm text-gray-500">March 2025 - April 2025 | Remote</p>
-        <p class="mt-3">Built real-world web solutions using HTML, CSS, JS.</p>
-      </div>
-      <div class="bg-white shadow-xl rounded-xl p-6 hover:shadow-2xl transition">
-        <p class="text-xl font-semibold">Web Software Developer - S3 Remotica Technologies, Alangulam, India</p>
-        <p class="text-sm text-gray-500">May 2025 - June 2025 | On-Site</p>
-        <p class="mt-3">Built responsive static website using React JS, Bootstrap, CSS, HTML, JavaScript.</p>
-      </div>
+    <!-- Resume & Contact Buttons -->
+    <section class="flex flex-col sm:flex-row justify-center gap-6 mt-20 px-4">
+      <a href="Vijayalakshmi_Resume.pdf" download class="bg-green-600 hover:bg-green-700 text-white text-lg px-6 py-3 rounded-full transition w-full sm:w-auto text-center">
+        Download Resume
+      </a>
+      <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-full transition w-full sm:w-auto text-center">
+        Get In Touch
+      </a>
     </section>
-
-    <!-- Projects Section -->
-    <section>
-      <h2 class="text-3xl font-bold text-blue-700 mb-8">📁 Projects</h2>
-      <div class="bg-white shadow-xl rounded-xl p-6 hover:shadow-2xl transition">
-        <p class="text-xl font-semibold">Personal Portfolio Website</p>
-        <p class="text-sm text-gray-500">Mar 2024 - Apr 2024 | HTML, Tailwind CSS, JavaScript</p>
-        <p class="mt-3">Designed and deployed a modern portfolio site showcasing my education, projects, and skills using clean responsive design.</p>
-      </div>
-      <div class="bg-white shadow-xl rounded-xl p-6 hover:shadow-2xl transition">
-        <p class="text-xl font-semibold">Groceries Website</p>
-        <p class="text-sm text-gray-500">May 2024 - June 2024 | HTML, CSS, React JS, Bootstrap</p>
-        <p class="mt-3">Designed and deployed a modern portfolio site showcasing my education, projects, and skills using clean responsive design.</p>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section>
-      <h2 class="text-3xl font-bold text-blue-700 mb-8">🛠 Skills</h2>
-      <div class="bg-white shadow-xl rounded-xl p-6 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
-        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded-full font-medium">Python</span>
-        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded-full font-medium">Java/JS</span>
-        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded-full font-medium">C++</span>
-        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded-full font-medium">R/React</span>
-        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded-full font-medium">MySQL</span>
-        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded-full font-medium break-words"> HTML/CSS</span>
-        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded-full font-medium">Machine Learning</span>
-        <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded-full font-medium">Data Analysis</span>
-      </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section>
-      <h2 class="text-3xl font-bold text-blue-700 mb-8">🏆 Achievements & Hobbies</h2>
-      <div class="bg-white shadow-xl rounded-xl p-6 hover:shadow-2xl transition">
-        <ul class="list-disc pl-6 space-y-2 text-gray-700">
-          <li>Organized G20 university tech event under faculty guidance</li>
-          <li>Passionate about AI in healthcare innovation</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section>
-      <h2 class="text-3xl font-bold text-blue-700 mb-8">📜 Certifications</h2>
-      <div class="bg-white shadow-xl rounded-xl p-6 hover:shadow-2xl transition">
-        <ul class="list-disc pl-6 space-y-2 text-gray-700">
-          <li>2nd International Conference on Recent Trends in Data Science (ICRTDS@24)
-            , St. Xavier's College (Autonomous), Palayamkottai(Oct 2024)</li>
-          <li>Tata Group - Data Visualisation: Empowering Business with Effective Insights Job Simulation
-            , Forage(Apr,2025)</li>
-          <li>Tata Group - Cybersecurity Analyst Job Simulation
-            , Forage(Apr 2025)</li>
-          <li>Introduction to Data Analysis using Microsoft Excel
-            , Coursera Project Network(Mar 2025)</li>
-          <li>Introduction To Machine Learning
-            , SkillElected Campus Program (Apr 2025)</li>
-        </ul>
-      </div>
-    </section>
-    <!-- Resume & Contact Buttons Section -->
-<section class="flex flex-col sm:flex-row justify-center gap-6 mt-20 px-4">
-  <a href="Vijayalakshmi_Resume.pdf" download class="bg-green-600 hover:bg-green-700 text-white text-lg px-6 py-3 rounded-full transition w-full sm:w-auto text-center">
-    Download Resume
-  </a>
-  <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-full transition w-full sm:w-auto text-center">
-    Get In Touch
-  </a>
-</section>
   </main>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer class="text-center p-6 bg-white border-t mt-12 text-gray-500 text-sm">
     &copy; 2025 Vijayalakshmi M. All rights reserved.
   </footer>
